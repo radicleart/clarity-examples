@@ -1,10 +1,10 @@
-# Clarity Hackathon Level 2 2020
+# Clarity in the Community
 
-## Clarity in the Community
-
-Intention is to provide implementations of the examples in the
+A library of implementations of the examples in the
 [clarity reference](https://docs.blockstack.org/core/smart/clarityref)
-as a community resource for developers wishing to learn Clarity.
+intended as a community resource for developers wishing to learn Clarity.
+
+Collaboration welcome - pull requests wanted!
 
 ## Unit Tests
 
@@ -22,9 +22,6 @@ test classes can be found in `test/unit/*.ts`
 npm run basics
 npm run maps
 ```
-
-Note: nongibles tests currently fail because of current limitations in tooling around using
-`(contract-call?)` in unit test environment.
 
 ## References
 
