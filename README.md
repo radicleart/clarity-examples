@@ -1,46 +1,36 @@
-# Clarity Tutorial 2020.
+# Clarity Hackathon Level 2 2020
 
+## Clarity in the Community
 
-Much of this was worked out by [friedger](https://github.com/friedger/clarity-smart-contracts) in Blockstack Community.
+Intention is to provide implementations of the examples in the
+[clarity reference](https://docs.blockstack.org/core/smart/clarityref)
+as a community resource for developers wishing to learn Clarity.
 
+## Unit Tests
+
+```bash
+git clone git@github.com:radicleart/clarity-examples.git
+
+npm install
 ```
-$ cargo run --bin blockstack-cli generate-sk --testnet > ../../radicle-solutions/clarity-tutorials/keys4.json
+
+(node version `nvm use v12.16.3`)
+
+test classes can be found in `test/unit/*.ts`
+
+```javascript
+npm run basics
+npm run maps
 ```
 
-### Run Mocknet
+Note: nongibles tests currently fail because of current limitations in tooling around using
+`(contract-call?)` in unit test environment.
 
-In directory **stacks-blockchain**:
+## References
 
-```
-cargo testnet start --config=./testnet/stacks-node/Stacks.toml
-```
-
-
-
-@mijoco prints actually produce events
-byadding an events_observer in your toml file, you setup a webhook that can subscribe to events, and receive an http call when one of these occurs
-https://github.com/blockstack/stacks-blockchain/blob/a94119e39eeeee13a5cd1d1fa4e012217b73d657/testnet/stacks-node/conf/local-follower-conf.toml#L31
-we'll probably add named events with indexed fields in a future
-mijocoToday at 15:29
-@diwaker @ludo great! Yes - solidity mutator funcs don't 'return' variables (just the txid) so you need events to get the change in state back to the client and they enable lots more. So its great we have this capability also!
-
-
-[[events_observer]]
-endpoint = "http://127.0.0.1:8080"
-events_keys = [
-    "STGT7GSMZG7EA0TS6MVSKT5JC1DCDFGZWJJZXN8A.store::print",
-    "STGT7GSMZG7EA0TS6MVSKT5JC1DCDFGZWJJZXN8A.contract.ft-token",
-    "STGT7GSMZG7EA0TS6MVSKT5JC1DCDFGZWJJZXN8A.contract.nft-token",
-    "stx"
-]
-
-
-
-@mijoco I'm not familiar with events in ethereum, but we do have a mechanism to "emit" events as they happen on the chain, and this event stream can be consumed for storage / analysis etc. This is how we're building the backend of the new Explorer. Is that similar to what you were asking?
-jefreybullaToday at 15:20
-I've trying to use the v2/contracts endpoint to call a smart contract function but I keep getting a '400 bad request' from the node (I am using Mocknet)
-
-Has anyone been successful at this?
-
-curl http://127.0.0.1:20443/v2/accounts/ST3PP4PA8H5CRQPVFYA52HH7SX5P53B041JC4SSM6?proof=0
-{"balance":"0x000000000000000000000000000f4240","nonce":0}
+* [Blockstack Clarity Documentation](https://docs.blockstack.org/core/smart/rpc-api.html)
+* [Stacks Transactions JS Library](https://github.com/blockstack/stacks-transactions-js)
+* [Stacks Blockchain](https://github.com/blockstack/stacks-blockchain)
+* [Stacks Blockchain Sidecar](https://github.com/blockstack/stacks-blockchain-sidecar)
+* [Clarity JS SDK](https://github.com/blockstack/clarity-js-sdk)
+* [Clarity VSCode](https://github.com/blockstack/clarity-vscode)

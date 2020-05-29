@@ -1,22 +1,21 @@
-;; Upto 10 fruits with names no more than 10 bytes
-(define-constant administrator 'ST1ESYCGJB5Z5NBHS39XPC70PGC14WAQK5XXNQYDW)
+;; Building Blocks
+;; Intention is to provide implementations of the example in the
+;; clarity reference: https://docs.blockstack.org/core/smart/clarityref
+;; as a community resource for developers wishing to learn Clarity
 
 ;; The begin function evaluates each of its input expressions, returning the return value 
 ;; of the last such expression.
 (define-read-only (test-begin-1)
     (begin (+ 1 2) 4 5)
 )
-
 (define-read-only (test-begin-2)
     (begin (+ (+ 1 2) 4 5))
 )
-
 (define-public (test-begin-3)
     (begin 
         (ok (not (is-eq "2" "1")))
     )
 )
-
 (define-read-only (test-begin-4)
     (begin 
         (err 1)
