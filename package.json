@@ -13,10 +13,9 @@
   "scripts": {
     "test": "mocha",
     "test:watch": "mocha --watch",
-    "variables": "mocha 'test/variables.ts'",
-    "collectibles": "mocha 'test/collectibles.ts'",
-    "maps": "mocha 'test/maps.ts'",
-    "lists": "mocha 'test/lists.ts'"
+    "error-codes": "mocha 'test/unit/error-codes.ts'",
+    "basics": "mocha 'test/unit/basics.ts'",
+    "maps": "mocha 'test/unit/maps.ts'"
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
