@@ -1,7 +1,8 @@
 # Clarity in the Community
 
-Tools to support the growth of Blockstack Stacks 2.0 network. References below
-contains links to a small number of resources available in the Ethereum eco-system.
+Tools to support the growth of Blockstack Stacks 2.0 network range from language support,
+syntax and linting, deployment and analysis. References below
+contain links to some of the analogous tools and resources available in the Ethereum eco-system.
 
 This repo focuses on Clarity language support and provides implementations of the examples in the
 [clarity reference](https://docs.blockstack.org/core/smart/clarityref). This is intended as
@@ -11,7 +12,7 @@ Collaboration welcome - pull requests wanted!
 
 ## Unit Tests
 
-```bash
+```bash2
 git clone git@github.com:radicleart/clarity-examples.git
 
 npm install
