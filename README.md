@@ -1,8 +1,11 @@
 # Clarity in the Community
 
-A library of implementations of the examples in the
-[clarity reference](https://docs.blockstack.org/core/smart/clarityref)
-intended as a community resource for developers wishing to learn Clarity.
+Tools to support the growth of Blockstack Stacks 2.0 network. References below
+contains links to a small number of resources available in the Ethereum eco-system.
+
+This repo focuses on Clarity language support and provides implementations of the examples in the
+[clarity reference](https://docs.blockstack.org/core/smart/clarityref). This is intended as
+an open source community resource for developers wishing to learn Clarity.
 
 Collaboration welcome - pull requests wanted!
 
@@ -23,7 +26,17 @@ npm run basics
 npm run maps
 ```
 
-## References
+### Ethereum
+
+* [Remix](https://remix.ethereum.org/)
+* [Bloxy](https://bloxy.info/)
+* [Etherscan - Rinkeby](https://rinkeby.etherscan.io/)
+* [Etherscan - Mainnet](https://etherscan.io/)
+* [Truffle](https://www.trufflesuite.com/)
+* [Ganache](https://www.trufflesuite.com/ganache/)
+* [Solidity by Example](https://solidity.readthedocs.io/en/latest/solidity-by-example.html)
+
+### Blockstack
 
 * [Blockstack Clarity Documentation](https://docs.blockstack.org/core/smart/rpc-api.html)
 * [Stacks Transactions JS Library](https://github.com/blockstack/stacks-transactions-js)
